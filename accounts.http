@@ -1,0 +1,52 @@
+@host = http://localhost:4000
+@token1 = user1:
+@token2 = user2:
+
+### 
+# Get all accounts from user1
+GET {{host}}/accounts HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get ačč accounts from user2
+GET {{host}}/accounts HTTP/1.1
+Authorization: Basic {{token2}}
+###
+# Get specific account  from user1
+GET {{host}}/accounts/acc_fbjkfaw449wszvaaxq0a2 HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get specific account from user2
+GET {{host}}/accounts/acc_2kmwszssu2cqf5ja3iclz HTTP/1.1
+Authorization: Basic {{token2}}
+###
+# Get account details from user1
+GET {{host}}/accounts/acc_fbjkfaw449wszvaaxq0a2/details HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get account details from user2
+GET {{host}}/accounts/acc_2kmwszssu2cqf5ja3iclz/details HTTP/1.1
+Authorization: Basic {{token2}}
+###
+# Get account balances from user1
+GET {{host}}/accounts/acc_fbjkfaw449wszvaaxq0a2/balances HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get account balances from user2
+GET {{host}}/accounts/acc_2kmwszssu2cqf5ja3iclz/balances HTTP/1.1
+Authorization: Basic {{token2}}
+###
+# Get all transactions for specific account of user1
+GET {{host}}/accounts/acc_fbjkfaw449wszvaaxq0a2/transactions HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get all transactions for specific account of user2
+GET {{host}}/accounts/acc_2kmwszssu2cqf5ja3iclz/transactions HTTP/1.1
+Authorization: Basic {{token2}}
+###
+# Get specific transaction from user1
+GET {{host}}/accounts/acc_fbjkfaw449wszvaaxq0a2/transactions/txn_vawvipb1ir1p5wwyt2ljv HTTP/1.1
+Authorization: Basic {{token1}}
+###
+# Get specific transaction from user2
+GET {{host}}/accounts/acc_2kmwszssu2cqf5ja3iclz/transactions/txn_1tm6nn4t76bjt9d8lsmw5 HTTP/1.1
+Authorization: Basic {{token2}}
